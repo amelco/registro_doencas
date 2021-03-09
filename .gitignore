@@ -1,4 +1,5 @@
 bd/database-data/
+bd/init.sql
 bd/init_data.sql
 bd/observacoes_insert.txt
 venv/
