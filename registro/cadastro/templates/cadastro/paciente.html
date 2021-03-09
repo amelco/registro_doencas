@@ -1,0 +1,16 @@
+<h1>Paciente</h1>
+
+{% comment %} <form action = "" method="post">
+{% csrf_token %}
+  <label for="1">Nome do paciente</label>
+  <input type="text" name="nome_paciente" id="1" />
+  <label for="1">Nome da doença</label>
+  <input type="text" name="nome" id="1" />
+  <button>Cadastrar</button>
+</form> {% endcomment %}
+
+<form action="{% url 'paciente' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>

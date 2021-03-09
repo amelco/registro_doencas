@@ -1,0 +1,14 @@
+version: '3'
+services:
+  database:
+    image: "postgres" # use latest official postgres version
+    env_file:
+      - database.env # configure postgres
+    volumes:
+      # - ./init.sql:/docker-entrypoint-initdb.d/1-schema.sql
+      # - ./init_data.sql:/docker-entrypoint-initdb.d/2-init-data.sql
+      - ./database-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+    ports:
+      - 5432:5432
+volumes:
+  database-data: # named volumes can be managed easier using docker-compose
