@@ -9,7 +9,6 @@ $ cd ..
 
 Crie um ambiente virtual python e instale as dependências
 ```
-$ cd registro
 $ virtualenv venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
@@ -17,6 +16,7 @@ $ pip install -r requirements.txt
 
 Faça as `migrations` do banco de dados:
 ```
+$ cd registro
 $ python manage.py makemigrations
 $ python manage.py migrate
 ```
